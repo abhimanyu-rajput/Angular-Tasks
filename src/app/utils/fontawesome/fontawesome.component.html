@@ -1,0 +1,53 @@
+<div class="container bg-light" >
+    <h1>How to use fontawesome in angular</h1>
+    <a href="https://github.com/FortAwesome/angular-fontawesome" target="_blank">Official angular componet for Font Awesome</a>
+    <hr>
+    <h2>Installtion</h2>
+    
+    <div class="commands">
+        $ npm install @fortawesome/angular-fontawesome@&#x3c;version&#x3e; <br>
+        <a href="https://github.com/FortAwesome/angular-fontawesome#compatibility-table" target="_blank"># See Compatibility table below to choose a correct version</a>
+        <br>
+        <br>
+        $ npm install @fortawesome/fontawesome-svg-core <br>
+        $ npm install @fortawesome/free-solid-svg-icons
+        
+    </div>
+
+    <h2>How to use </h2>
+    <p>To get up and running using Font Awesome with Angular follow below steps:</p>
+
+    <h3>1. Creates shared module and Add FontAwesomeModule to imports in src/app/shared/shared.module.ts 
+        <a href="https://github.com/FortAwesome/angular-fontawesome#usage" target="_blank">Or follow</a></h3>
+        <input type="hidden" #HowToUse1 value="import { CommonModule } from '@angular/common';
+        import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
+        import { fas } from '@fortawesome/free-solid-svg-icons';
+        import { far } from '@fortawesome/free-regular-svg-icons';
+        import { fab } from '@fortawesome/free-brands-svg-icons';
+    
+        @NgModule({
+          declarations: [],
+          imports: [CommonModule,FontAwesomeModule ],
+          exports: [ FontAwesomeModule]
+        })
+        export class SharedModule { 
+    
+          constructor(private iconLib: FaIconLibrary) {
+              iconLib.addIconPacks(fas);
+              iconLib.addIconPacks(far);
+              iconLib.addIconPacks(fab);
+          }
+    
+        }">
+    <pre class="commands">
+        <code [innerHTML]="HowToUse1.value">
+        </code>
+    </pre>
+
+    <h3>2. Import this shared module in your multiple modules and use it: </h3>
+    <p>Icon : <fa-icon [icon]="['fas','home']"></fa-icon></p>
+    <pre class="commands">
+        &#x3c;fa-icon [icon]="['fas','home']"&#x3e;&#x3c;/fa-icon&#x3e;
+    </pre>
+    <br>
+</div>
