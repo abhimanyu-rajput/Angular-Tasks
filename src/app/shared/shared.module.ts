@@ -1,21 +1,24 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
-import {MatButtonModule} from '@angular/material/button';
+import { FilterPipe } from '../pipe/filter.pipe';
+import { FormsModule } from '@angular/forms';
+// import {MatButtonModule} from '@angular/material/button';
 
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [FilterPipe],
   imports: [
-    CommonModule,
-    FontAwesomeModule, MatButtonModule
+    CommonModule, FormsModule,
+    FontAwesomeModule
   ],
-  exports: [MatButtonModule, FontAwesomeModule]
+  exports: [FontAwesomeModule, FormsModule,FilterPipe]
 })
 export class SharedModule { 
 
