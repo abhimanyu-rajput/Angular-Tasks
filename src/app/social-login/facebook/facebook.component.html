@@ -1,2 +1,11 @@
-<p>facebook works!</p>
-<button class="btn btn-primary" (click)="loginFb()">Login</button>
+<div class="container">
+    <p>facebook works!</p>
+    <button class="btn btn-success" (click)="login()" *ngIf="!isLoggedin">Login</button>
+    <button class="btn btn-primary" (click)="logout()" *ngIf="isLoggedin">Logout</button>
+    <hr>
+    <div *ngIf="isLoggedin">
+        <h2>Login Status: {{loginStatus | json}}</h2>
+        <hr>
+        <h2>Login Response: {{loginRes | json}}</h2>
+    </div>
+</div>
