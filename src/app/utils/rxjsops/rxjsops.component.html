@@ -1,19 +1,24 @@
+<br>
 <div class="container">
-    <h3>rxjsops works!</h3>
+    <h3><b>RxJS</b> is a JavaScript library that uses observables to work with reactive programming that deals with asynchronous data calls, callbacks and event-based programs. It is supported by JavaScript and also with typescript.</h3>
 
+    <p>Some of mostly used Rxjs Operators like: Map, ExhaustMap, SwitchMap, Zip, ForkJoin, Tap, DebounceTime, Timer, FormEvent, Of...etc</p>
+
+    <hr>
     <h2>Get Users Details</h2>
-    <p>Example for Rxjs Tap, ExhaustMap Operators.</p>
+    <p class="font-weight-bold">Example for Rxjs FromEvent, Tap, DebounceTime, ExhaustMap Operators.</p>
 
     <div class="row">
         <div class="col-md">
             <button class="btn btn-primary" #btnGetUsrDtls>Get Users Details</button>
         </div>
-        <div class="col-md d-flex flex-row-reverse">
-            <input type="text" class="from-cntrol col-5" ngModel #searchUser placeholder="Search by Name">
-        </div>
     </div>
     <br><br>
     <div *ngIf="usersDetails!=null">
+        <div class="d-flex flex-row-reverse">
+            <input type="text" class="form-control col-3" ngModel #searchUser placeholder="Search by Name">
+        </div>
+        <br><br>
         <table class="table">
             <tr>
                 <th>Srno</th>
@@ -34,8 +39,22 @@
                 <td>{{user.address['city']}}</td>
             </tr>
         </table>
-        <hr>
     </div>
 
+    <hr>
+    <h2>Get User By UserName</h2>
+    <p class="font-weight-bold">Example for FromEvent, Map, DebounceTime, DistinctUntilChanged, SwitchMap Operators.</p>
+    <p><b>Example result for:</b>  [Bret, Antonette, Samantha, Karianne, Kamren, Leopoldo_Corkery, Elwyn.Skiles, Maxime_Nienow, Delphine, Moriah.Stanton]</p>
+    <div class="row">
+        <div class="col-md">
+            <input type="text" class="form-control col-6" #SearchByUserName ngModel placeholder="User Name">
+        </div>
+    </div>
+    <br>
+    <div *ngIf="singleUser">
+        <h2><strong>Result For: {{SearchByUserName.value}}</strong></h2>
+        <div *ngIf="singleUser.length==0" class="text-danger">No result found.</div>
+        <div *ngIf="singleUser.length!=0">{{singleUser | json}}</div>
+    </div>
 
 </div>
