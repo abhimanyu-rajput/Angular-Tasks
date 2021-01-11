@@ -1,6 +1,7 @@
 import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { fromEvent, observable } from 'rxjs';
-import { debounceTime, exhaustMap, tap, map, distinctUntilChanged, switchMap } from 'rxjs/operators';
+import { debounceTime, exhaustMap, tap, map, distinctUntilChanged, switchMap, pluck } from 'rxjs/operators';
 import { HttpserviceService } from 'src/app/services/httpservice.service';
 import { TempdataService } from 'src/app/services/tempdata.service';
 
@@ -12,7 +13,7 @@ import { TempdataService } from 'src/app/services/tempdata.service';
 export class RxjsopsComponent implements OnInit, AfterViewInit {
 
   @ViewChild('btnGetUsrDtls') public btnGetUsrDtls:ElementRef;
-  @ViewChild('SearchByUserName') public SearchByUserName:ElementRef;
+  @ViewChild('SearchByUserName') public SearchByUserName:NgForm;
 
   public usersDetails:any;
   public singleUser:any;
@@ -45,12 +46,13 @@ export class RxjsopsComponent implements OnInit, AfterViewInit {
     });
 
     // Get User details by username
-    fromEvent(this.SearchByUserName.nativeElement,'keyup')
-    .pipe(
-      map(res => {return res['target'].value}),
-      debounceTime(500),
+    const getUserDetails = this.SearchByUserName.valueChanges;
+
+    getUserDetails.pipe(
+      pluck('userName'),
+      debounceTime(200),
       distinctUntilChanged(),
-      switchMap((res:string) => this._httpserv.fatchUserData(res))
+      switchMap(res => this._httpserv.fatchUserData(res))
     )
     .subscribe(res => {
       this.singleUser = res;

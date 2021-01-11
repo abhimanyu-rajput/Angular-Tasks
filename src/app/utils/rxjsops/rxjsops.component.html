@@ -43,16 +43,18 @@
 
     <hr>
     <h2>Get User By UserName</h2>
-    <p class="font-weight-bold">Example for FromEvent, Map, DebounceTime, DistinctUntilChanged, SwitchMap Operators.</p>
+    <p class="font-weight-bold">Example for Map, DebounceTime, DistinctUntilChanged, SwitchMap Operators.</p>
     <p><b>Example result for:</b>  [Bret, Antonette, Samantha, Karianne, Kamren, Leopoldo_Corkery, Elwyn.Skiles, Maxime_Nienow, Delphine, Moriah.Stanton]</p>
     <div class="row">
         <div class="col-md">
-            <input type="text" class="form-control col-6" #SearchByUserName ngModel placeholder="User Name">
+            <form #SearchByUserName="ngForm">
+                <input type="text" class="form-control col-6" name="userName" ngModel placeholder="User Name">
+            </form>
         </div>
     </div>
     <br>
     <div *ngIf="singleUser">
-        <h2><strong>Result For: {{SearchByUserName.value}}</strong></h2>
+        <h2><strong>Result For: {{SearchByUserName['userName']}}</strong></h2>
         <div *ngIf="singleUser.length==0" class="text-danger">No result found.</div>
         <div *ngIf="singleUser.length!=0">{{singleUser | json}}</div>
     </div>
