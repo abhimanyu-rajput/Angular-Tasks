@@ -5,10 +5,11 @@ import { UtilsRoutingModule } from './utils-routing.module';
 import { FontawesomeComponent } from './fontawesome/fontawesome.component';
 import { SharedModule } from '../shared/shared.module';
 import { RxjsopsComponent } from './rxjsops/rxjsops.component';
+import { PwaComponent } from './pwa/pwa.component';
 
 
 @NgModule({
-  declarations: [FontawesomeComponent, RxjsopsComponent],
+  declarations: [FontawesomeComponent, RxjsopsComponent, PwaComponent],
   imports: [
     CommonModule,
     UtilsRoutingModule,

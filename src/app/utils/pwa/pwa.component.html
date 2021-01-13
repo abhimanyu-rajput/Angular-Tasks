@@ -1,0 +1,154 @@
+<div class="container">
+    <h2>Angular - Progressive Web App (PWA) <small><a href="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps">MDN Docs</a></small></h2>
+
+    <p>A progressive web application (PWA) is a type of application software delivered through the web, built using common web technologies including HTML, 
+        CSS and JavaScript. It is intended to work on any platform that uses a standards-compliant browser, including both desktop and mobile devices.</p>
+    <p>While web applications have been available for mobile devices from the start, they have generally been slower, have had fewer features, 
+        and have been less used than native apps. PWA features narrow the gap between user experience in web-based and native applications. Features include</p>
+
+    <ul>
+        <li>Ability to run offline</li>
+        <li>High performance</li>
+        <li>Background processing in service workers in a separate thread</li>
+        <li>Access to the phone's sensors</li>
+        <li>Support for push notifications</li>
+        <li>An icon on the phone‘s home screen</li>
+    </ul>
+
+    <h2>Angular Service Worker <small><a href="https://angular.io/guide/service-worker-intro"><fa-icon [icon]="['fas','external-link-alt']"></fa-icon></a></small></h2>
+    
+    <p>Angular's service worker is designed to optimize the end user experience of using an application over a slow or unreliable network connection, 
+        while also minimizing the risks of serving outdated content.</p>
+    <p>The Angular service worker's behavior follows that design goal:</p>
+    <ul>
+        <li>Caching an application is like installing a native application. The application is cached as one unit, and all files update together.</li>
+        <li>A running application continues to run with the same version of all files. It does not suddenly start receiving cached files from a newer version, which are likely incompatible.</li>
+        <li>When users refresh the application, they see the latest fully cached version. New tabs load the latest cached code.</li>
+        <li>Updates happen in the background, relatively quickly after changes are published. The previous version of the application is served until an update is installed and ready.</li>
+        <li>The service worker conserves bandwidth when possible. Resources are only downloaded if they've changed.</li>
+    </ul>
+
+    <h2>Adding a service worker to your project 
+        <small><a href="https://angular.io/guide/service-worker-getting-started#adding-a-service-worker-to-your-project">
+            <fa-icon [icon]="['fas','external-link-alt']"></fa-icon>
+        </a></small>
+    </h2>
+    <p>To set up the Angular service worker in your project, use the CLI command: </p>
+    <div class="commands">
+        <p>ng add @angular/pwa</p>
+        
+        <p>ng build --prod</p>
+        
+        <p><span class="text-primary">#Skip this if http-server already installed</span> <br> npm install --global http-server</p>
+        
+        <p>
+            <span class="text-primary">To serve the directory containing your web files with http-server, run the following command:</span>
+            <br>http-server -p &#x3c;PORT&#x3e; -c-1 dist/&#x3c;project-name&#x3e;
+        </p>
+        
+        
+
+        <p><span class="text-danger">Ex. http-serve -p 8080 -c-1 dist/pwaspp</span></p>
+        Open browser - http://localhost:8080
+    </div>
+<br>
+    <h2>Register Service Worker in app.module.ts</h2>
+    <div class="commands">
+        
+            
+<pre>
+    import &#123; <span class="text-success">ServiceWorkerModule</span> &#125; from '@angular/service-worker';
+    import &#123; <span class="text-success">environment</span> &#125; from 'src/environments/environment';
+
+    
+    @NgModule(&#123; 
+        declaration: &#91;....&#93;,
+        imports: &#91;
+            ......
+            <span class="text-success">ServiceWorkerModule.register('ngsw-worker.js',&#123;enabled: environment.production&#125;)</span>
+        &#93;,
+        providers: &#91;....&#93;,
+        bootstrap: &#91;....&#93;
+    &#125;)
+
+    export class AppModule &#123; &#125;
+</pre>
+        
+    </div>
+
+    <h2>Some small chamges in angular.json</h2>
+
+    <div class="text-center">
+        <img src="assets/images/angular-json.png" alt="angilar-json" class="responsive">
+    </div>
+    <br>
+    <h2>ngsw-config.json</h2>
+
+    <div class="text-center">
+        <img src="assets/images/ngsw-config-json.png" alt="angilar-json" class="responsive">
+    </div>
+
+    <br>
+
+    <h2>Caching external resources</h2>
+
+    <p>By default Service-worker does not cache external resources included via a CDN like font etc. We add some configration to <b class="text-danger">ngsw-config.json</b><br>
+    In the <b>assetGroups</b> in first element just need to add 'urls:[]'
+    </p>
+    <div class="commands">
+<pre>
+    "assetGroups": [
+    &#123;
+      "name": "app",
+      "installMode": "prefetch",
+      "resources": &#123;
+        "files": [
+          "/favicon.ico",
+          "/index.html",
+          "/manifest.webmanifest",
+          "/*.css",
+          "/*.js"
+        ],
+        <span class="text-success">"urls":["https://fonts.googleapis.com/css2?family=Roboto&display=swap"]</span>
+      &#125;
+    &#125;, &#123;
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "resources": &#123;
+        "files": [
+          "/assets/**",
+          "/*.(eot|svg|cur|jpg|png|webp|gif|otf|ttf|woff|woff2|ani)"
+        ]
+      &#125;
+    &#125;
+  ]
+</pre>
+    </div>
+
+    <br>
+
+    <h2>Configure Service-Worker for booking API's Calls</h2>
+    <p>Open <b class="text-danger">ngsw-config.json</b> and add this configration:</p>
+
+    <div class="commands">
+<pre>
+<code>
+    "dataGroups": [
+        &#123;
+            "name": "api-calls",
+            "urls": [
+            "/shipments"
+            ],
+            "cacheConfig": &#123;
+            "strategy": "freshness",   <span class="text-success">// Can do 'performance' otherwise</span>
+            "maxSize": 100,
+            "maxAge": "3d"
+            &#125;
+        &#125;
+    ]
+</code>
+</pre>
+    </div>
+
+</div>

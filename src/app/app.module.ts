@@ -8,6 +8,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/shared.module';
 import { MainComponent } from './main/main.component';
 import { ListComponent } from './list/list.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { ListComponent } from './list/list.component';
     HttpClientModule, 
     AppRoutingModule,
     BrowserAnimationsModule,
-    SharedModule
+    SharedModule,
+    ServiceWorkerModule.register('ngsw-worker.js',{enabled: environment.production})
   ],
   providers: [],
   bootstrap: [AppComponent]
