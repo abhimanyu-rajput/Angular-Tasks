@@ -7,7 +7,8 @@ import { far } from '@fortawesome/free-regular-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { FilterPipe } from '../pipe/filter.pipe';
 import { FormsModule } from '@angular/forms';
-// import {MatButtonModule} from '@angular/material/button';
+import { MaterialcompModule } from './materialcomp.module';
+
 
 
 
@@ -15,10 +16,11 @@ import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [FilterPipe],
   imports: [
+    MaterialcompModule,
     CommonModule, FormsModule,
-    FontAwesomeModule
+    FontAwesomeModule 
   ],
-  exports: [FontAwesomeModule, FormsModule,FilterPipe]
+  exports: [MaterialcompModule, FontAwesomeModule, FormsModule,FilterPipe]
 })
 export class SharedModule { 
 
