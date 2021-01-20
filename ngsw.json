@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1611140944832,
+  "timestamp": 1611143120801,
   "index": "/Angular-Tasks/index.html",
   "assetGroups": [
     {
@@ -19,8 +19,8 @@
         "/Angular-Tasks/7-es5.e9ecca34f08c9ca766c3.js",
         "/Angular-Tasks/favicon.ico",
         "/Angular-Tasks/index.html",
-        "/Angular-Tasks/main-es2015.f3b90e4f03293bc0a874.js",
-        "/Angular-Tasks/main-es5.f3b90e4f03293bc0a874.js",
+        "/Angular-Tasks/main-es2015.5edaf9a2b2d444194825.js",
+        "/Angular-Tasks/main-es5.5edaf9a2b2d444194825.js",
         "/Angular-Tasks/polyfills-es2015.f332a089ad1600448873.js",
         "/Angular-Tasks/polyfills-es5.177e85a9724683782539.js",
         "/Angular-Tasks/runtime-es2015.19bb04fecc46c3a9e560.js",
@@ -88,9 +88,9 @@
     "/Angular-Tasks/assets/images/mainfest.webmainfest.png": "5b8f69b267970220f2be249c08168e73d5482059",
     "/Angular-Tasks/assets/images/ngsw-config-json.png": "7cff9198d313398293c9bff2bf8e3cd4e7eb8bc4",
     "/Angular-Tasks/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/Angular-Tasks/index.html": "c3c100351e96571e497e4372d2384d605673acf1",
-    "/Angular-Tasks/main-es2015.f3b90e4f03293bc0a874.js": "8334a61506bb775dc9710543f82fa57422daf224",
-    "/Angular-Tasks/main-es5.f3b90e4f03293bc0a874.js": "bc8afb1b2e289191c1d87e9161ae008b8ba0857b",
+    "/Angular-Tasks/index.html": "68a32d647e8045d63722611703064fa0455343b3",
+    "/Angular-Tasks/main-es2015.5edaf9a2b2d444194825.js": "776c1286512d5aed914f50a35d52814fb5dd6f12",
+    "/Angular-Tasks/main-es5.5edaf9a2b2d444194825.js": "70ef34d512e6672df6da5f20a7e020059d327315",
     "/Angular-Tasks/polyfills-es2015.f332a089ad1600448873.js": "72ad4ccc0a3916ae4598199447cdeadd6d380570",
     "/Angular-Tasks/polyfills-es5.177e85a9724683782539.js": "8aa26ea87b9958c6bd13b7c257c0e9940438e684",
     "/Angular-Tasks/runtime-es2015.19bb04fecc46c3a9e560.js": "9753a8fff4b16e6a605186323589921effb748bd",
