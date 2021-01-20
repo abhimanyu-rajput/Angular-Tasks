@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +10,8 @@ import { MainComponent } from './main/main.component';
 import { ListComponent } from './list/list.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from 'src/environments/environment';
+import { LoadingInterceptor } from './interceptor/loading.interceptor';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { environment } from 'src/environments/environment';
     SharedModule,
     ServiceWorkerModule.register('ngsw-worker.js',{enabled: environment.production})
   ],
-  providers: [],
+  providers: [
+    {provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi:true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

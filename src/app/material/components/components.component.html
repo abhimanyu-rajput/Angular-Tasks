@@ -1,0 +1,31 @@
+
+
+<mat-toolbar color="primary" fxLayout="row" fxLayoutAlign="space-between center">
+    <span>Angular Material</span>
+    <div fxHide.xs>
+        <a class="mat-nav-item" routerLink="/" mat-button><fa-icon [icon]="['fas','home']"></fa-icon> Home</a>
+        <a class="mat-nav-item" mat-button>Cards</a>
+        <a class="mat-nav-item" mat-button>Forms</a>
+        <a class="mat-nav-item" mat-button>To Do App</a>
+    </div>
+    <div fxHide fxShow.xs>
+        <a class="mat-nav-item" mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+            <mat-icon>menu</mat-icon>
+        </a>
+          <mat-menu #menu="matMenu">
+            <a class="mat-nav-menu-item" mat-menu-item>
+              <mat-icon>home</mat-icon>
+              <span>Home</span>
+            </a>
+            <a class="mat-nav-menu-item" mat-menu-item>
+              <mat-icon>voicemail</mat-icon>
+              <span>Card</span>
+            </a>
+            <a class="mat-nav-menu-item" mat-menu-item>
+              <mat-icon>notifications_off</mat-icon>
+              <span>To Do App</span>
+            </a>
+          </mat-menu>
+          
+    </div>
+</mat-toolbar>

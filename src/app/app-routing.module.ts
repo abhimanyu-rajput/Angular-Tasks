@@ -22,7 +22,8 @@ const routes: Routes = [
         loadChildren: () => import('./utils/utils.module').then(m => m.UtilsModule)
       }
     ]
-  }
+  },
+  {path: 'material', loadChildren: () => import('./material/material.module').then(m => m.MaterialModule)}
   
 ];
 

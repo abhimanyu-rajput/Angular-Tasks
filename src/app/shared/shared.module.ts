@@ -8,6 +8,7 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
 import { FilterPipe } from '../pipe/filter.pipe';
 import { FormsModule } from '@angular/forms';
 import { MaterialcompModule } from './materialcomp.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 
@@ -17,10 +18,10 @@ import { MaterialcompModule } from './materialcomp.module';
   declarations: [FilterPipe],
   imports: [
     MaterialcompModule,
-    CommonModule, FormsModule,
+    CommonModule, FormsModule, FlexLayoutModule,
     FontAwesomeModule 
   ],
-  exports: [MaterialcompModule, FontAwesomeModule, FormsModule,FilterPipe]
+  exports: [MaterialcompModule, FontAwesomeModule, FormsModule,FilterPipe, FlexLayoutModule]
 })
 export class SharedModule { 
 

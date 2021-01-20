@@ -6,6 +6,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class TempdataService {
 
+  public loading = new BehaviorSubject(false);
   private usersDetails = new BehaviorSubject('')
 
   constructor() { }
@@ -17,6 +18,7 @@ export class TempdataService {
   getUsersDetails() {
     return this.usersDetails.asObservable();
   }
+
 
 
 }//End

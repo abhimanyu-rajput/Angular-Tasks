@@ -32,7 +32,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link m-2 menu-item nav-active">Material</a>
+                <a routerLink="/material" class="nav-link m-2 menu-item nav-active">Material</a>
             </li>
         </ul>
     </div>
@@ -40,7 +40,7 @@
 
   
 <div role="main" style="margin-top: 68px;">
-    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+    <mat-progress-bar *ngIf="tds.loading | async" mode="indeterminate" color="warn"></mat-progress-bar>
     <br>
     <router-outlet></router-outlet>
     <br><br><br><br>

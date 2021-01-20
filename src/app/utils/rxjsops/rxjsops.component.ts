@@ -33,7 +33,6 @@ export class RxjsopsComponent implements OnInit, AfterViewInit {
         this.btnGetUsrDtls.nativeElement.disabled = true;
         this.btnGetUsrDtls.nativeElement.innerText = "Fetching Data...";
       }),
-      debounceTime(3000),
       exhaustMap(() => this._httpserv.fatchData()),
       tap(() => {
         this.btnGetUsrDtls.nativeElement.disabled = false;
