@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1610538641217,
+  "timestamp": 1611140944832,
   "index": "/Angular-Tasks/index.html",
   "assetGroups": [
     {
@@ -11,20 +11,22 @@
         "ignoreVary": true
       },
       "urls": [
-        "/Angular-Tasks/5-es2015.5bd819937d565e0f2c0d.js",
-        "/Angular-Tasks/5-es5.5bd819937d565e0f2c0d.js",
-        "/Angular-Tasks/6-es2015.e8dfdc574f4694936b50.js",
-        "/Angular-Tasks/6-es5.e8dfdc574f4694936b50.js",
+        "/Angular-Tasks/5-es2015.fc55c4ca1df71e9af93a.js",
+        "/Angular-Tasks/5-es5.fc55c4ca1df71e9af93a.js",
+        "/Angular-Tasks/6-es2015.2ee61faefd1293f7e7c8.js",
+        "/Angular-Tasks/6-es5.2ee61faefd1293f7e7c8.js",
+        "/Angular-Tasks/7-es2015.e9ecca34f08c9ca766c3.js",
+        "/Angular-Tasks/7-es5.e9ecca34f08c9ca766c3.js",
         "/Angular-Tasks/favicon.ico",
         "/Angular-Tasks/index.html",
-        "/Angular-Tasks/main-es2015.96d0e6ceee85f1219f74.js",
-        "/Angular-Tasks/main-es5.96d0e6ceee85f1219f74.js",
+        "/Angular-Tasks/main-es2015.f3b90e4f03293bc0a874.js",
+        "/Angular-Tasks/main-es5.f3b90e4f03293bc0a874.js",
         "/Angular-Tasks/polyfills-es2015.f332a089ad1600448873.js",
         "/Angular-Tasks/polyfills-es5.177e85a9724683782539.js",
-        "/Angular-Tasks/runtime-es2015.4fea7a2f46f5b3e42118.js",
-        "/Angular-Tasks/runtime-es5.4fea7a2f46f5b3e42118.js",
+        "/Angular-Tasks/runtime-es2015.19bb04fecc46c3a9e560.js",
+        "/Angular-Tasks/runtime-es5.19bb04fecc46c3a9e560.js",
         "/Angular-Tasks/scripts.a73844de5f291be94c3b.js",
-        "/Angular-Tasks/styles.9acdc666aec105886e19.css"
+        "/Angular-Tasks/styles.f366d49990aa34021e81.css"
       ],
       "patterns": []
     },
@@ -68,10 +70,12 @@
     }
   ],
   "hashTable": {
-    "/Angular-Tasks/5-es2015.5bd819937d565e0f2c0d.js": "35565dde7b83a034957d1a0f617f9e04d037cefb",
-    "/Angular-Tasks/5-es5.5bd819937d565e0f2c0d.js": "0411fb211b1e6000c47ec9fbbfc9bfcb547fca61",
-    "/Angular-Tasks/6-es2015.e8dfdc574f4694936b50.js": "653254fd3229ebdad2e2babd10cad5330ec7e6ac",
-    "/Angular-Tasks/6-es5.e8dfdc574f4694936b50.js": "7e58255f9f68a77b374109cbfe43ed990223056e",
+    "/Angular-Tasks/5-es2015.fc55c4ca1df71e9af93a.js": "a68b6778e35fc0b18388187c5ab44feea3e5da31",
+    "/Angular-Tasks/5-es5.fc55c4ca1df71e9af93a.js": "d122016aa0cb4dceb308c6ea6787cdc015e04cc5",
+    "/Angular-Tasks/6-es2015.2ee61faefd1293f7e7c8.js": "8776709c7231808a97602ad14cfe6439215bd076",
+    "/Angular-Tasks/6-es5.2ee61faefd1293f7e7c8.js": "983964d1511b5800db2c55e7f354f443d7577df3",
+    "/Angular-Tasks/7-es2015.e9ecca34f08c9ca766c3.js": "58eae4a42e03f86e02d43a854c40547791baf59e",
+    "/Angular-Tasks/7-es5.e9ecca34f08c9ca766c3.js": "a44f934276dd572fb773060ab840c17c505055de",
     "/Angular-Tasks/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
     "/Angular-Tasks/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
     "/Angular-Tasks/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
@@ -84,15 +88,15 @@
     "/Angular-Tasks/assets/images/mainfest.webmainfest.png": "5b8f69b267970220f2be249c08168e73d5482059",
     "/Angular-Tasks/assets/images/ngsw-config-json.png": "7cff9198d313398293c9bff2bf8e3cd4e7eb8bc4",
     "/Angular-Tasks/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/Angular-Tasks/index.html": "760131c2f7d9100c0a89e84bedf3f7eda9844e07",
-    "/Angular-Tasks/main-es2015.96d0e6ceee85f1219f74.js": "78051ba5cabd2a58fb974494cde65ef7fe1219a4",
-    "/Angular-Tasks/main-es5.96d0e6ceee85f1219f74.js": "58f75402714b6e2ac7b934f47e66679ffaebc657",
+    "/Angular-Tasks/index.html": "c3c100351e96571e497e4372d2384d605673acf1",
+    "/Angular-Tasks/main-es2015.f3b90e4f03293bc0a874.js": "8334a61506bb775dc9710543f82fa57422daf224",
+    "/Angular-Tasks/main-es5.f3b90e4f03293bc0a874.js": "bc8afb1b2e289191c1d87e9161ae008b8ba0857b",
     "/Angular-Tasks/polyfills-es2015.f332a089ad1600448873.js": "72ad4ccc0a3916ae4598199447cdeadd6d380570",
     "/Angular-Tasks/polyfills-es5.177e85a9724683782539.js": "8aa26ea87b9958c6bd13b7c257c0e9940438e684",
-    "/Angular-Tasks/runtime-es2015.4fea7a2f46f5b3e42118.js": "3b78458bd7e57cf24876ed5c818082af37318f9c",
-    "/Angular-Tasks/runtime-es5.4fea7a2f46f5b3e42118.js": "870d451a26deb074eed2841c34b0a8de1d4e5ba7",
+    "/Angular-Tasks/runtime-es2015.19bb04fecc46c3a9e560.js": "9753a8fff4b16e6a605186323589921effb748bd",
+    "/Angular-Tasks/runtime-es5.19bb04fecc46c3a9e560.js": "54549239ee8fffb3f3bcb8f0d2d76e8018d4db7a",
     "/Angular-Tasks/scripts.a73844de5f291be94c3b.js": "cdef624513ee94b7a7492331a86977578e3cf4ba",
-    "/Angular-Tasks/styles.9acdc666aec105886e19.css": "a1803cfea9cb4a4c942ea181720a952808355546"
+    "/Angular-Tasks/styles.f366d49990aa34021e81.css": "20afbc3ec2ae53dd78fb6982f3b0854bcd7abd18"
   },
   "navigationUrls": [
     {
