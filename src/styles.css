@@ -26,7 +26,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   /* -------- */
 
   .commands {
-    background: #e4e4e4;
+    border: solid 1px #e4e4e4;
+    background: #eeeeee61;
     padding: 15px;
     border-radius: 5px;
     margin-bottom: 15px;

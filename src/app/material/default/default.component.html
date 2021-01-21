@@ -1,0 +1,55 @@
+
+<h2>Install Angular Material
+    <small><a href="https://material.angular.io/guide/getting-started">
+        <fa-icon [icon]="['fas','external-link-alt']"></fa-icon>
+    </a></small>
+</h2>
+
+<div class="commands">
+    ng add @angular/material
+</div>
+
+<h2>Create a shared module to share Angular Material dependencies</h2>
+
+<div class="commands">
+<pre>
+    import &#123; NgModule &#125; from '@angular/core';
+    import &#123; MatButtonModule &#125; from '@angular/material/button';
+    import &#123; MatIconModule &#125; from '@angular/material/icon';
+    import &#123; MatMenuModule &#125; from '@angular/material/menu';
+
+    ....
+
+    @NgModule(&#123;
+        declarations: [...],
+        imports: [MatButtonModule, MatIconModule, MatMenuModule],
+        exports: [MatButtonModule, MatIconModule, MatMenuModule]
+    &#125;)
+
+    export class MaterialcompModule &#123;&#125;
+</pre>
+</div>
+
+<p>Use this module in your <span class="text-primary">app.module.ts</span> or any other module</p>
+
+<div class="commands">
+<pre>
+    import &#123; BrowserModule &#125; from '@angular/platform-browser';
+    import &#123; NgModule &#125; from '@angular/core';
+    ....
+    <span class="text-success">import &#123; MaterialcompModule &#125; from './shared/MaterialcompModule.module';</span>
+    ....
+
+    @NgModule(&#123;
+    declarations: [....],
+    imports: [
+        ...
+        <span class="text-success">MaterialcompModule,</span>
+        ...
+    ],
+    providers: [...],
+    bootstrap: [AppComponent]
+    &#125;)
+    export class AppModule &#123; &#125;
+</pre>
+</div>

@@ -1,3 +1,9 @@
+.logo {
+    font-size: .8em;
+}
+.logo img {
+    margin-top: -5px;
+}
 a.mat-nav-item {
     text-decoration: none;
     color: #fff;
